@@ -18,6 +18,7 @@
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: #EDAE49;
 }
 
 .nav-links {
@@ -28,6 +29,7 @@
 .nav-links a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
@@ -46,9 +48,15 @@
 
 #search-input {
     padding: 0.5rem 1rem;
-    border: none;
+    border: 2px solid #30638E;
     border-radius: 4px;
     width: 200px;
+    background-color: #00798C;
+    color: white;
+}
+
+#search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 button {
@@ -56,20 +64,23 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 #search-btn {
     background-color: #EDAE49;
-    color: black;
+    color: #003D5B;
+    font-weight: bold;
 }
 
 #search-btn:hover {
     background-color: #D1495B;
+    color: white;
 }
 
 #clear-btn {
-    background-color: #EDAE49;
-    color: black;
+    background-color: #30638E;
+    color: white;
 }
 
 #clear-btn:hover {
@@ -92,10 +103,12 @@ button {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: #EDAE49;
 }
 
 .hero p {
     font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
+    color: white;
 }
