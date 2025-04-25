@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlyRecommend - Travel Adviser</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">
             <span>FlyRecommend</span>
         </div>
         <div class="nav-links">
-            <a href="#" class="active">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
+            <a href="#" data-page="home" class="active">Home</a>
+            <a href="#" data-page="about">About Us</a>
+            <a href="#">Contact Us</a> <!-- Kept in nav but no data-page -->
         </div>
         <div class="search-container">
             <input type="text" id="search-input" placeholder="Search destinations...">
@@ -23,13 +26,41 @@
         </div>
     </nav>
 
-    <main class="home-page">
-        <section class="hero">
-            <h1>Discover Your Perfect Destination</h1>
-            <p>Let FlyRecommend guide you to the world's most amazing places</p>
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    </div>
+
+    <main>
+        <section class="page active" id="home-page">
+            <div class="hero">
+                <h1>Discover Your Perfect Destination</h1>
+                <p>Let FlyRecommend guide you to the world's most amazing places</p>
+                <a href="#" class="book-now">Book Now</a>
+            </div>
+            <div class="task-boxes" id="recommendation-results"></div>
+        </section>
+
+        <section class="page" id="about-page">
+            <div class="about-card">
+                <h2>About FlyRecommend</h2>
+                <p>We're passionate travelers dedicated to helping you discover the world's hidden gems.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h3>Alex Chen</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Maria Garcia</h3>
+                        <p>Head of Travel</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <script src="travel_recommendation.js"></script>
 </body>
+
 </html>
