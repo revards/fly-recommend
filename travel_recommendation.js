@@ -1,15 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-links a[data-page]');
     const pages = document.querySelectorAll('.page');
-    
+
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetPage = this.getAttribute('data-page');
-            
+
             navLinks.forEach(l => l.classList.remove('active'));
             this.classList.add('active');
-            
+
             pages.forEach(page => {
                 page.classList.remove('active');
                 if (page.id === `${targetPage}-page`) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const searchBtn = document.getElementById('search-btn');
     const clearBtn = document.getElementById('clear-btn');
-    
+
     searchBtn.addEventListener('click', handleSearch);
     clearBtn.addEventListener('click', clearResults);
 });

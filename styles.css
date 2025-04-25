@@ -6,11 +6,8 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 61, 91, 0.7), rgba(0, 61, 91, 0.7)), 
-                      url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1');
+    background: linear-gradient(rgba(0, 61, 91, 0.7), rgba(0, 61, 91, 0.7)) url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1') fixed;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     min-height: 100vh;
 }
 
@@ -46,12 +43,12 @@ body {
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: #EDAE49;
 }
 
 .nav-links a.active {
-    color: #EDAE49;
     font-weight: bold;
 }
 
@@ -173,15 +170,17 @@ button {
     gap: 1rem;
     padding: 2rem;
 }
-#about-page.active {
+
+#about-page.active,
+#contact-page.active {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    min-height: calc(100vh - 70px);
 }
 
-.about-card {
+.about-card,
+.contact-card {
     background-color: rgba(48, 99, 142, 0.7);
     padding: 3rem;
     border-radius: 12px;
@@ -191,7 +190,8 @@ button {
     backdrop-filter: blur(5px);
 }
 
-.about-card h2 {
+.about-card h2,
+.contact-card h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #EDAE49;
@@ -228,4 +228,34 @@ button {
     font-size: 1.1rem;
     margin-bottom: 0;
     text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#contact-form button {
+    background-color: #EDAE49;
+    color: #003D5B;
+    padding: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #D1495B;
+    color: white;
 }

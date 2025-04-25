@@ -17,7 +17,7 @@
         <div class="nav-links">
             <a href="#" data-page="home" class="active">Home</a>
             <a href="#" data-page="about">About Us</a>
-            <a href="#">Contact Us</a> <!-- Kept in nav but no data-page -->
+            <a href="#" data-page="contact">Contact Us</a>
         </div>
         <div class="search-container">
             <input type="text" id="search-input" placeholder="Search destinations...">
@@ -56,6 +56,17 @@
                         <p>Head of Travel</p>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="page" id="contact-page">
+            <div class="contact-card">
+                <h2>Contact Us</h2>
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required rows="5"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
